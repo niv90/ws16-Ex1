@@ -5,6 +5,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 var studentGrade;
 
+
 //get all student from json
 app.get('/getAllStudent',function(req,res){
     res.status(200).json(studGrade.getAllStudents());
@@ -16,8 +17,8 @@ app.param('user_id',function(req,res,next,value){
     studentGrade = studGrade.getStudGradeById(value);
     //the id is not exist if studentGrade is negative 
     if(studentGrade == -1){
-        res.set('header-getStudGradeById',"the id isn't exist please try another ID");
-        res.status(400).json({status:false,message:"bad ID"});
+        res.set('header-getStudGradeById',"The ID does not exist in the database please try another ID");
+        res.status(400).json({status:false,message:"The ID does not exist in the database please try another ID"});
     }
     next();
 });
@@ -38,14 +39,20 @@ app.get('/betweenGrade',function(req,res){
     studentsGrade = studGrade.getRangeGrade(query.from,query.to);
     //the range of the grade is not valid if studentGrade is negative 
     if(studentsGrade == -1 ){
-        res.set('header-betweenGrade',"there is not grade in that range you specified");
-        res.status(400).json({status:false,message:"bad grade range"});
+        res.set('header-betweenGrade',"there is not gradeד in the range that you specified");
+        res.status(400).json({status:false,message:"The range of grades is not correctly"});
     }
     else{
         res.status(200).json({ gradeByRange : studentsGrade });
     }
     
 });  
+
+//Catches the rest
+app.get('*',function(req,res){
+     res.set('header-Worng Route',"entered incorrect path");
+     res.status(400).json({status:false,message:"You entered incorrect path"});
+});
 
 app.listen(port);
 console.log('listening' + port);
