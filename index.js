@@ -12,7 +12,7 @@ app.get('/getAllStudent',function(req,res){
 });
 
 
-//callback for user_id call, check if the id param is exist in the list
+//callback for user_id param, check if the id param is exist in the list
 app.param('user_id',function(req,res,next,value){
     studentGrade = studGrade.getStudGradeById(value);
     //the id is not exist if studentGrade is negative 
@@ -39,7 +39,7 @@ app.get('/betweenGrade',function(req,res){
     studentsGrade = studGrade.getRangeGrade(query.from,query.to);
     //the range of the grade is not valid if studentGrade is negative 
     if(studentsGrade == -1 ){
-        res.set('header-betweenGrade',"there is not gradeד in the range that you specified");
+        res.set('header-betweenGrade',"there isn't grades in the range that you specified");
         res.status(400).json({status:false,message:"The range of grades is not correctly"});
     }
     else{
