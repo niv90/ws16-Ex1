@@ -50,7 +50,7 @@ app.get('/betweenGrade',function(req,res){
 
 //Catches the rest
 app.get('*',function(req,res){
-     res.set('header-Worng Route',"entered incorrect path");
+     res.set('header-worngRoute',"entered incorrect path");
      res.status(400).json({status:false,message:"You entered incorrect path"});
 });
 
