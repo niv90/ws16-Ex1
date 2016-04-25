@@ -9,14 +9,14 @@ var studentsGrade = [
 
 //get all student from json
 exports.getAllStudents = function () {
-    return studentsGrad;
+    return studentsGrade;
 };
 
 //get student grade by ID. return -1 if the student isn't exist
 exports.getStudGradeById = function (value) {
-    for(index=0 ; index < studentsGrad.length ; index++){
-        if(studentsGrad[index].ID == value){
-            return studentsGrad[index].grade;
+    for(index=0 ; index < studentsGrade.length ; index++){
+        if(studentsGrade[index].ID == value){
+            return studentsGrade[index].grade;
         }
     }
     return -1;
