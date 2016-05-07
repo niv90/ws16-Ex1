@@ -1,5 +1,3 @@
-# ws16-Ex1
-
 # Students Grades Web Service API.
 Please look at the API: <br>
 
