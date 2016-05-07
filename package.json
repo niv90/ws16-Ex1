@@ -1,0 +1,19 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "niv baruch",
+  "license": "ISC",
+  "dependencies": {
+<<<<<<< HEAD
+    "express": "^4.13.4",
+    "mongoose": "^4.4.14"
+=======
+    "express": "^4.13.4"
+>>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
+  }
+}
