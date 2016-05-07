@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 var studentsGrade = null;
 
 //set the data from mlab in studentsGrade variable 
@@ -7,21 +5,6 @@ exports.setData = function(json){
     if (studentsGrade==null)
          studentsGrade=json;
 };
-=======
-=======
->>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
-var studentsGrade = [
-    {"ID":"1","firstName":"John", "lastName":"Doe" , "grade":92 , "year":2000}, 
-    {"ID":"2","firstName":"Anna", "lastName":"Smith", "grade":80 , "year":2015}, 
-    {"ID":"3","firstName":"Peter", "lastName":"Jones", "grade":85 , "year":2014},
-    {"ID":"4","firstName":"Frank", "lastName":"Goldman", "grade":95 , "year":2013},
-    {"ID":"5","firstName":"David", "lastName":"Davision", "grade":90 , "year":2012}
-]
-
-<<<<<<< HEAD
->>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
-=======
->>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
 
 //get all student from json
 exports.getAllStudents = function () {

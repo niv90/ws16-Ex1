@@ -1,21 +1,14 @@
 var studGrade = require('./md_StudentsGrad');
 var express = require('express');
 var url = require('url');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 var mongoose = require('mongoose');
 var student = require('./student');
 
-=======
->>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
-=======
->>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
 var app = express();
 var port = process.env.PORT || 3000;
 var studentGrade;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 //connect to db in Mlab
 mongoose.connect('mongodb://db_usr:db_pass@ds015902.mlab.com:15902/ex1_db');
 
@@ -29,10 +22,6 @@ mongoose.connection.once('open',function(){
         mongoose.disconnect();         
     });    
 });
-=======
->>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
-=======
->>>>>>> 310b5aff716d23bc5cde5b566ea892cb1c55fca4
 
 //get all student from json
 app.get('/getAllStudent',function(req,res){
