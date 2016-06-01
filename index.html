@@ -31,6 +31,19 @@ The students details returned in JSON objects.<br></p>
 
 <p><a href="https://targil1.herokuapp.com/getAllStudent">https://targil1.herokuapp.com/getAllStudent</a></p>
 
+<p>JSON response examples:
+<br>
+[
+ {
+   _id: "572c321bb3f30a0752a5e2ef",
+   ID: 1,
+   firstName: "John",
+   lastName: "Doe",
+   grade: 95,
+   year: 2000
+ }
+]</p>
+
 <h3>
 <a id="show-grade-by-specific-id" class="anchor" href="#show-grade-by-specific-id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Show Grade By Specific ID:</h3>
 
@@ -43,6 +56,12 @@ error - if ID does not exist in the database.<br><br>
 Header:<br>
 header getStudGradeById - if ID does not exist in the database.<br></p>
 
+<p>JSON response examples:
+<br>
+{
+  gradeById: 95
+}</p>
+
 <h3>
 <a id="show-students-in-range-of-grades" class="anchor" href="#show-students-in-range-of-grades" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Show students in range of grades:</h3>
 
@@ -54,7 +73,16 @@ to -  Specify the end of the grade range<br><br>
 Throws:<br>
 error - if there isn't grades in the range that you specified<br><br>
 Header:<br>
-header betweenGrade - if there isn't grades in the range that you specified<br></p>
+header betweenGrade - if there isn't grades in the range that you specified<br><br>
+JSON response examples:
+<br></p>
+
+<p>{
+  gradeByRange: [
+   "John",
+   "Anna"
+  ]
+}</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/niv90/ws16-Ex1">Ws16-ex1</a> is maintained by <a href="https://github.com/niv90">niv90</a>.</span>
